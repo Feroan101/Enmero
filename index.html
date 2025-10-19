@@ -161,7 +161,9 @@ License: https://freebootstrap.net/license
                 </div>
               </div>
               <div class="col-lg-6">
-                <div class="hero-img"><img class="img-card img-fluid" src="assets/images/card-expenses.png" alt="Image card" data-aos="fade-down" data-aos-delay="600"><img class="img-main img-fluid rounded-4" src="assets/images/hero-img-1-min.jpg" alt="Hero Image" data-aos="fade-in" data-aos-delay="500"></div>
+                <div class="hero-img">
+                  <img class="img-main img-fluid rounded-4" src="assets/images/logo/idfk.png" alt="Hero Image" data-aos="fade-in" data-aos-delay="500">
+                </div>
               </div>
             </div>
           </div>
@@ -223,7 +225,6 @@ License: https://freebootstrap.net/license
                               <h2 class="mb-4">Why Choose us</h2>
                               <p class="mb-5">Enmero Technologies provides innovative and tailored solutions with a strong focus on reliability, security, and scalable growth. Our expert team partners with businesses to deliver smart systems that adapt to changing needs, helping clients stay competitive and efficient in a rapidly evolving digital world. We prioritize client success and long-term value through cutting-edge technology and a deep commitment to quality.</p>
                             </div>
-                            <div class="align-self-start"><a class="glightbox btn btn-play d-inline-flex align-items-center gap-2" href="https://www.youtube.com/watch?v=DQx96G4yHd8" data-gallery="video"><i class="bi bi-play-fill"></i> Watch the Video</a></div>
                           </div>
                         </div>
                       </div>
@@ -265,47 +266,355 @@ License: https://freebootstrap.net/license
         <!-- End Features-->
         
         <!-- ======= Pricing =======-->
-        <section class="section pricing__v2" id="pricing">
-          <div class="container">
-            <div class="row mb-5">
-              <div class="col-md-5 mx-auto text-center"><span class="subtitle text-uppercase mb-3" data-aos="fade-up" data-aos-delay="0">Pricing</span>
-                <h2 class="mb-3" data-aos="fade-up" data-aos-delay="100">Plan for every budget</h2>
-                <p data-aos="fade-up" data-aos-delay="200">Experience the future of finance with our secure, efficient, and user-friendly financial services</p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-4 mb-4 mb-md-0" data-aos="fade-up" data-aos-delay="300">
-                <div class="p-5 rounded-4 price-table h-100">
-                  <h3>Personal</h3>
-                  <p>Choose a plan that fits your personal financial needs and start managing your finances more effectively.</p>
-                  <div class="price mb-4"><strong>$7</strong><span>/ month</span></div>
-                  <div><a class="btn" href="#">Get Started</a></div>
-                </div>
-              </div>
-              <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
-                <div class="p-5 rounded-4 price-table popular h-100">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <h3 class="mb-3">Business</h3>
-                      <p>Optimize your business financial operations with our tailored business plans.</p>
-                      <div class="price mb-4"><strong class="me-1">$29</strong><span>/ month</span></div>
-                      <div><a class="btn btn-white hover-outline" href="#">Get Started</a></div>
+        <!-- FIXED Enhanced Pricing Section with Working Dropdown & Better Mobile Carousel -->
+<section class="section pricing__v2" id="pricing">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-md-8 mx-auto text-center">
+                <span class="subtitle text-uppercase mb-3" data-aos="fade-up" data-aos-delay="0">Pricing</span>
+                <h2 class="mb-3" data-aos="fade-up" data-aos-delay="100">Transparent Pricing for Every Service</h2>
+                <p data-aos="fade-up" data-aos-delay="200">Choose the perfect service package that fits your needs with flexible pricing across regions</p>
+                
+                <!-- Currency Selector - FIXED z-index -->
+                <div class="currency-selector mt-4" data-aos="fade-up" data-aos-delay="250" style="position: relative; z-index: 100;">
+                    <div class="dropdown d-inline-block">
+                        <button class="btn btn-outline-primary dropdown-toggle d-inline-flex align-items-center gap-2" type="button" id="currencyDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="min-width: 200px;">
+                            <span class="flag-icon" id="selectedFlag">🇮🇳</span>
+                            <span id="selectedCurrency">India (INR - ₹)</span>
+                        </button>
+                        <ul class="dropdown-menu shadow" aria-labelledby="currencyDropdown" style="z-index: 1050;">
+                            <li><a class="dropdown-item currency-option" href="#" data-country="india" data-currency="INR" data-symbol="₹" data-flag="🇮🇳" data-rate="1" data-name="India">🇮🇳 India (INR - ₹)</a></li>
+                            <li><a class="dropdown-item currency-option" href="#" data-country="usa" data-currency="USD" data-symbol="$" data-flag="🇺🇸" data-rate="0.012" data-name="USA">🇺🇸 USA (USD - $)</a></li>
+                            <li><a class="dropdown-item currency-option" href="#" data-country="uk" data-currency="GBP" data-symbol="£" data-flag="🇬🇧" data-rate="0.0095" data-name="UK">🇬🇧 UK (GBP - £)</a></li>
+                            <li><a class="dropdown-item currency-option" href="#" data-country="uae" data-currency="AED" data-symbol="د.إ" data-flag="🇦🇪" data-rate="0.044" data-name="UAE">🇦🇪 UAE (AED - د.إ)</a></li>
+                            <li><a class="dropdown-item currency-option" href="#" data-country="korea" data-currency="KRW" data-symbol="₩" data-flag="🇰🇷" data-rate="15.8" data-name="South Korea">🇰🇷 South Korea (KRW - ₩)</a></li>
+                        </ul>
                     </div>
-                    <div class="col-md-6 pricing-features">
-                      <h4 class="text-uppercase fw-bold mb-3">Features</h4>
-                      <ul class="list-unstyled d-flex flex-column gap-3">
-                        <li class="d-flex gap-2 align-items-start mb-0"><span class="icon rounded-circle position-relative mt-1"><i class="bi bi-check"></i></span><span>Personalized financial insights and reports</span></li>
-                        <li class="d-flex gap-2 align-items-start mb-0"><span class="icon rounded-circle position-relative mt-1"><i class="bi bi-check"></i></span><span>Priority customer support</span></li>
-                        <li class="d-flex gap-2 align-items-start mb-0"><span class="icon rounded-circle position-relative mt-1"><i class="bi bi-check"></i></span><span>Access to exclusive investment opportunities</span></li>
-                        <li class="d-flex gap-2 align-items-start mb-0"><span class="icon rounded-circle position-relative mt-1"><i class="bi bi-check"></i></span><span>AI-driven financial recommendations</span></li>
-                      </ul>
-                    </div>
-                  </div>
                 </div>
-              </div>
             </div>
-          </div>
-        </section>
+        </div>
+
+        <!-- Desktop View - Grid -->
+        <div class="pricing-grid d-none d-lg-block">
+            <div class="row g-4">
+                <!-- Web Development - MOST POPULAR -->
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="p-4 rounded-4 price-table popular h-100">
+                        <div class="badge-popular">Most Popular</div>
+                        <div class="service-icon mb-3">
+                            <i class="bi bi-code-slash fs-1"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Web Development</h3>
+                        <p class="mb-4">Modern, responsive websites with cutting-edge design and performance</p>
+                        <div class="price mb-4">
+                            <strong class="currency-symbol">₹</strong>
+                            <strong class="price-amount" data-base-price="50000">50,000</strong>
+                            <span class="text-muted">/ project</span>
+                        </div>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Responsive Design</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>SEO Optimization</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>CMS Integration</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>3 Months Support</li>
+                        </ul>
+                        <a class="btn btn-primary w-100" href="services.html">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- Cybersecurity -->
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="p-4 rounded-4 price-table h-100">
+                        <div class="service-icon mb-3">
+                            <i class="bi bi-shield-lock fs-1"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Cybersecurity Package</h3>
+                        <p class="mb-4">Comprehensive security solutions to protect your digital assets</p>
+                        <div class="price mb-4">
+                            <strong class="currency-symbol">₹</strong>
+                            <strong class="price-amount" data-base-price="75000">75,000</strong>
+                            <span class="text-muted">/ month</span>
+                        </div>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>24/7 Monitoring</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Threat Detection</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Penetration Testing</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Compliance Support</li>
+                        </ul>
+                        <a class="btn btn-primary w-100" href="services.html">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- Digital Transformation -->
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="p-4 rounded-4 price-table h-100">
+                        <div class="service-icon mb-3">
+                            <i class="bi bi-lightbulb fs-1"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Digital Transformation</h3>
+                        <p class="mb-4">Strategic consulting and technology modernization services</p>
+                        <div class="price mb-4">
+                            <strong class="currency-symbol">₹</strong>
+                            <strong class="price-amount" data-base-price="100000">100,000</strong>
+                            <span class="text-muted">/ project</span>
+                        </div>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Strategy Development</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Process Automation</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Cloud Migration</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Change Management</li>
+                        </ul>
+                        <a class="btn btn-primary w-100" href="services.html">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- Application Development -->
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="p-4 rounded-4 price-table h-100">
+                        <div class="service-icon mb-3">
+                            <i class="bi bi-phone fs-1"></i>
+                        </div>
+                        <h3 class="h4 mb-3">App Development</h3>
+                        <p class="mb-4">Custom mobile applications for iOS and Android platforms</p>
+                        <div class="price mb-4">
+                            <strong class="currency-symbol">₹</strong>
+                            <strong class="price-amount" data-base-price="80000">80,000</strong>
+                            <span class="text-muted">/ app</span>
+                        </div>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Native Development</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>UI/UX Design</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>API Integration</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>App Store Submission</li>
+                        </ul>
+                        <a class="btn btn-primary w-100" href="services.html">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- Software Development -->
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="700">
+                    <div class="p-4 rounded-4 price-table h-100">
+                        <div class="service-icon mb-3">
+                            <i class="bi bi-laptop fs-1"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Software Development</h3>
+                        <p class="mb-4">Custom enterprise software solutions tailored to your needs</p>
+                        <div class="price mb-4">
+                            <strong class="currency-symbol">₹</strong>
+                            <strong class="price-amount" data-base-price="120000">120,000</strong>
+                            <span class="text-muted">/ project</span>
+                        </div>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Custom Solutions</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>System Integration</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Legacy Modernization</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Ongoing Maintenance</li>
+                        </ul>
+                        <a class="btn btn-primary w-100" href="services.html">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- Software Testing -->
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="800">
+                    <div class="p-4 rounded-4 price-table h-100">
+                        <div class="service-icon mb-3">
+                            <i class="bi bi-bug fs-1"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Software Testing & QA</h3>
+                        <p class="mb-4">Comprehensive testing and quality assurance services</p>
+                        <div class="price mb-4">
+                            <strong class="currency-symbol">₹</strong>
+                            <strong class="price-amount" data-base-price="40000">40,000</strong>
+                            <span class="text-muted">/ project</span>
+                        </div>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Automated Testing</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Performance Testing</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Security Testing</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>UAT Support</li>
+                        </ul>
+                        <a class="btn btn-primary w-100" href="services.html">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile View - Carousel - FIXED CONTROLS -->
+        <div class="pricing-carousel d-lg-none">
+            <div id="pricingCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+                <!-- Dots Indicators -->
+                <div class="carousel-indicators" style="margin-bottom: -40px;">
+                    <button type="button" data-bs-target="#pricingCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                    <button type="button" data-bs-target="#pricingCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#pricingCarousel" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#pricingCarousel" data-bs-slide-to="3"></button>
+                    <button type="button" data-bs-target="#pricingCarousel" data-bs-slide-to="4"></button>
+                    <button type="button" data-bs-target="#pricingCarousel" data-bs-slide-to="5"></button>
+                </div>
+                
+                <div class="carousel-inner py-4">
+                    <!-- Slide 1: Web Development - MOST POPULAR -->
+                    <div class="carousel-item active">
+                        <div class="p-4 rounded-4 price-table popular mx-3">
+                            <div class="badge-popular">Most Popular</div>
+                            <div class="service-icon mb-3">
+                                <i class="bi bi-code-slash fs-1"></i>
+                            </div>
+                            <h3 class="h4 mb-3">Web Development</h3>
+                            <p class="mb-4">Modern, responsive websites with cutting-edge design and performance</p>
+                            <div class="price mb-4">
+                                <strong class="currency-symbol">₹</strong>
+                                <strong class="price-amount" data-base-price="50000">50,000</strong>
+                                <span class="text-muted">/ project</span>
+                            </div>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Responsive Design</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>SEO Optimization</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>CMS Integration</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>3 Months Support</li>
+                            </ul>
+                            <a class="btn btn-primary w-100" href="services.html">Get Started</a>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2: Cybersecurity -->
+                    <div class="carousel-item">
+                        <div class="p-4 rounded-4 price-table mx-3">
+                            <div class="service-icon mb-3">
+                                <i class="bi bi-shield-lock fs-1"></i>
+                            </div>
+                            <h3 class="h4 mb-3">Cybersecurity Package</h3>
+                            <p class="mb-4">Comprehensive security solutions to protect your digital assets</p>
+                            <div class="price mb-4">
+                                <strong class="currency-symbol">₹</strong>
+                                <strong class="price-amount" data-base-price="75000">75,000</strong>
+                                <span class="text-muted">/ month</span>
+                            </div>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>24/7 Monitoring</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Threat Detection</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Penetration Testing</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Compliance Support</li>
+                            </ul>
+                            <a class="btn btn-primary w-100" href="services.html">Get Started</a>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3: Digital Transformation -->
+                    <div class="carousel-item">
+                        <div class="p-4 rounded-4 price-table mx-3">
+                            <div class="service-icon mb-3">
+                                <i class="bi bi-lightbulb fs-1"></i>
+                            </div>
+                            <h3 class="h4 mb-3">Digital Transformation</h3>
+                            <p class="mb-4">Strategic consulting and technology modernization services</p>
+                            <div class="price mb-4">
+                                <strong class="currency-symbol">₹</strong>
+                                <strong class="price-amount" data-base-price="100000">100,000</strong>
+                                <span class="text-muted">/ project</span>
+                            </div>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Strategy Development</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Process Automation</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Cloud Migration</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Change Management</li>
+                            </ul>
+                            <a class="btn btn-primary w-100" href="services.html">Get Started</a>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4: App Development -->
+                    <div class="carousel-item">
+                        <div class="p-4 rounded-4 price-table mx-3">
+                            <div class="service-icon mb-3">
+                                <i class="bi bi-phone fs-1"></i>
+                            </div>
+                            <h3 class="h4 mb-3">App Development</h3>
+                            <p class="mb-4">Custom mobile applications for iOS and Android platforms</p>
+                            <div class="price mb-4">
+                                <strong class="currency-symbol">₹</strong>
+                                <strong class="price-amount" data-base-price="80000">80,000</strong>
+                                <span class="text-muted">/ app</span>
+                            </div>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Native Development</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>UI/UX Design</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>API Integration</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>App Store Submission</li>
+                            </ul>
+                            <a class="btn btn-primary w-100" href="services.html">Get Started</a>
+                        </div>
+                    </div>
+
+                    <!-- Slide 5: Software Development -->
+                    <div class="carousel-item">
+                        <div class="p-4 rounded-4 price-table mx-3">
+                            <div class="service-icon mb-3">
+                                <i class="bi bi-laptop fs-1"></i>
+                            </div>
+                            <h3 class="h4 mb-3">Software Development</h3>
+                            <p class="mb-4">Custom enterprise software solutions tailored to your needs</p>
+                            <div class="price mb-4">
+                                <strong class="currency-symbol">₹</strong>
+                                <strong class="price-amount" data-base-price="120000">120,000</strong>
+                                <span class="text-muted">/ project</span>
+                            </div>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Custom Solutions</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>System Integration</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Legacy Modernization</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Ongoing Maintenance</li>
+                            </ul>
+                            <a class="btn btn-primary w-100" href="services.html">Get Started</a>
+                        </div>
+                    </div>
+
+                    <!-- Slide 6: Software Testing -->
+                    <div class="carousel-item">
+                        <div class="p-4 rounded-4 price-table mx-3">
+                            <div class="service-icon mb-3">
+                                <i class="bi bi-bug fs-1"></i>
+                            </div>
+                            <h3 class="h4 mb-3">Software Testing & QA</h3>
+                            <p class="mb-4">Comprehensive testing and quality assurance services</p>
+                            <div class="price mb-4">
+                                <strong class="currency-symbol">₹</strong>
+                                <strong class="price-amount" data-base-price="40000">40,000</strong>
+                                <span class="text-muted">/ project</span>
+                            </div>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Automated Testing</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Performance Testing</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Security Testing</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>UAT Support</li>
+                            </ul>
+                            <a class="btn btn-primary w-100" href="services.html">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Improved Carousel Controls for Mobile -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#pricingCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#pricingCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Disclaimer -->
+        <div class="row mt-5 pt-3">
+            <div class="col-12 text-center">
+                <p class="text-muted small mb-0">
+                    <i class="bi bi-info-circle me-1"></i>
+                    Prices shown are indicative. Additional charges may apply due to international tariffs and local taxes. Final pricing will be confirmed upon consultation.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
         <!-- End Pricing-->
         
         <!-- ======= How it works =======-->
@@ -612,7 +921,7 @@ License: https://freebootstrap.net/license
                     <div class="col-6">
                       <div class="d-flex align-items-start">
                         <div class="icon me-3" style="width: 50px; height: 50px; background: rgba(11,13,26,0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-                          <i class="bi bi-handshake fs-4" style="color: #0b0d1a;"></i>
+                          <i class="bi bi-globe fs-4" style="color: #0b0d1a;"></i>
                         </div>
                         <div>
                           <h6 class="mb-1">Relationships</h6>
@@ -685,7 +994,6 @@ License: https://freebootstrap.net/license
             <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="400">
               <div class="col-lg-8 text-center">
                 <a href="careers.html" class="btn btn-light btn-lg me-3">Explore Opportunities</a>
-                <a href="careers.html#early-careers" class="btn btn-outline-light btn-lg">Graduate Programs</a>
               </div>
             </div>
           </div>
@@ -772,10 +1080,7 @@ License: https://freebootstrap.net/license
                   <div class="d-flex align-items-start gap-3" data-aos="fade-up" data-aos-delay="100">
                     <div class="icon d-block"><i class="bi bi-send"></i></div><span> <span class="d-block">Email</span><strong>info@mydomain.com</strong></span>
                   </div>
-                  <div class="d-flex align-items-start gap-3" data-aos="fade-up" data-aos-delay="200">
-                    <div class="icon d-block"><i class="bi bi-geo-alt"></i></div><span> <span class="d-block">Address</span>
-                      <address class="fw-bold">123 Main Street Apt 4B Springfield, <br> IL 62701 United States</address></span>
-                  </div>
+                  
                 </div>
               </div>
               <div class="col-md-6">
@@ -839,29 +1144,41 @@ License: https://freebootstrap.net/license
                   <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
                     <h3 class="mb-3">Company</h3>
                     <ul class="list-unstyled">
-                      <li><a href="page-about.html">Leadership</a></li>
                       <li><a href="careers.html">Careers <span class="badge ms-1">we're hiring</span></a></li>
                       <li><a href="page-case-studies.html">Case Studies</a></li>
                       <li><a href="page-terms-conditions.html">Terms &amp; Conditions</a></li>
                       <li><a href="page-privacy-policy.html">Privacy Policy</a></li>
-                      <li><a href="page-404.html">404 page</a></li>
                     </ul>
                   </div>
-                  <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
-                    <h3 class="mb-3">Accounts</h3>
-                    <ul class="list-unstyled">
-                      <li><a href="page-signup.html">Register</a></li>
-                      <li><a href="page-signin.html">Sign in</a></li>
-                      <li><a href="page-forgot-password.html">Fogot Password</a></li>
-                      <li><a href="page-coming-soon.html">Coming soon</a></li>
-                      <li><a href="page-portfolio-masonry.html">Portfolio Masonry</a></li>
-                    </ul>
-                  </div>
+                  
                   <div class="col-md-6 col-lg-4 mb-4 mb-lg-0 quick-contact">
                     <h3 class="mb-3">Contact</h3>
-                    <p class="d-flex mb-3"><i class="bi bi-geo-alt-fill me-3"></i><span>123 Main Street Apt 4B Springfield, <br> IL 62701 United States</span></p><a class="d-flex mb-3" href="mailto:info@mydomain.com"><i class="bi bi-envelope-fill me-3"></i><span>info@mydomain.com</span></a><a class="d-flex mb-3" href="tel://+123456789900"><i class="bi bi-telephone-fill me-3"></i><span>+1 (234) 5678 9900</span></a><a class="d-flex mb-3" href="https://freebootstrap.net"><i class="bi bi-globe me-3"></i><span>FreeBootstrap.net</span></a>
-                  </div>
+                    <a class="d-flex mb-3" href="mailto:info@mydomain.com">
+                        <i class="bi bi-envelope-fill me-3"></i>
+                        <span>info@mydomain.com</span>
+                    </a>
+                    <a class="d-flex mb-3" href="tel://+123456789900">
+                        <i class="bi bi-telephone-fill me-3"></i>
+                        <span>+1 (234) 5678 9900</span>
+                    </a>
+                    
+                    <!-- Social Media Icons -->
+                    <div class="social-links mt-4">
+                        <h5 class="mb-3">Follow Us</h5>
+                        <div class="d-flex gap-3">
+                            <a href="https://linkedin.com/company/yourcompany" target="_blank" class="social-icon">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                            <a href="https://instagram.com/yourcompany" target="_blank" class="social-icon">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                            <a href="https://twitter.com/yourcompany" target="_blank" class="social-icon">
+                                <i class="bi bi-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
+              </div>
               </div>
             </div>
             <div class="row credits pt-3">
@@ -884,9 +1201,9 @@ License: https://freebootstrap.net/license
       </main>
     </div>
     
-    <!-- ======= Back to Top =======-->
+    <!-- ======= Back to Top =======
     <button id="back-to-top"><i class="bi bi-arrow-up-short"></i></button>
-    <!-- End Back to top-->
+     End Back to top-->
     
     <!-- ======= Javascripts =======-->
     <script src="assets/vendors/bootstrap/bootstrap.bundle.min.js"></script>
@@ -900,6 +1217,88 @@ License: https://freebootstrap.net/license
     <script src="assets/js/custom.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="assets/js/send_email.js"></script>
+
+<!-- JavaScript for Currency Conversion -->
+<<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    console.log('Pricing section loaded');
+    
+    // Get all currency dropdown items
+    const currencyOptions = document.querySelectorAll('.currency-option');
+    
+    console.log('Found currency options:', currencyOptions.length);
+    
+    currencyOptions.forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            console.log('Currency clicked');
+            
+            const currency = this.getAttribute('data-currency');
+            const symbol = this.getAttribute('data-symbol');
+            const flag = this.getAttribute('data-flag');
+            const rate = parseFloat(this.getAttribute('data-rate'));
+            const name = this.getAttribute('data-name');
+            
+            console.log('Selected:', name, currency, symbol, rate);
+            
+            // Update selected currency display
+            const selectedFlag = document.getElementById('selectedFlag');
+            const selectedCurrency = document.getElementById('selectedCurrency');
+            
+            if (selectedFlag) selectedFlag.textContent = flag;
+            if (selectedCurrency) selectedCurrency.textContent = `${name} (${currency} - ${symbol})`;
+            
+            // Update all prices
+            updatePrices(rate, symbol);
+            
+            // Close dropdown
+            const dropdown = bootstrap.Dropdown.getInstance(document.getElementById('currencyDropdown'));
+            if (dropdown) dropdown.hide();
+        });
+    });
+
+    function updatePrices(rate, symbol) {
+        console.log('Updating prices with rate:', rate, 'symbol:', symbol);
+        
+        // Get all price elements
+        const priceAmounts = document.querySelectorAll('.price-amount');
+        const currencySymbols = document.querySelectorAll('.currency-symbol');
+        
+        console.log('Found price amounts:', priceAmounts.length);
+        console.log('Found currency symbols:', currencySymbols.length);
+        
+        // Update symbols
+        currencySymbols.forEach(el => {
+            el.textContent = symbol;
+        });
+        
+        // Update amounts
+        priceAmounts.forEach(el => {
+            const basePrice = parseFloat(el.getAttribute('data-base-price'));
+            const convertedPrice = Math.round(basePrice * rate);
+            
+            // Format number with commas
+            el.textContent = convertedPrice.toLocaleString();
+            
+            console.log('Updated price:', basePrice, '→', convertedPrice);
+        });
+    }
+
+    // Initialize Bootstrap carousel on mobile
+    const carouselElement = document.getElementById('pricingCarousel');
+    if (carouselElement && window.innerWidth < 992) {
+        console.log('Initializing carousel');
+        const carousel = new bootstrap.Carousel(carouselElement, {
+            interval: 4000,
+            wrap: true,
+            pause: 'hover',
+            touch: true
+        });
+    }
+});
+</script>
     <!-- End JavaScripts-->
   </body>
 </html>

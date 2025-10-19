@@ -1249,3 +1249,361 @@ h6 {
   opacity: 1;
   visibility: visible;
 }
+
+
+/* Fix dropdown z-index issues */
+.currency-selector {
+    position: relative;
+    z-index: 100 !important;
+}
+
+.dropdown-menu {
+    z-index: 1050 !important;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15) !important;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.dropdown-toggle {
+    padding: 12px 24px !important;
+    font-size: 1rem;
+    justify-content: center;
+}
+
+.flag-icon {
+    font-size: 1.5rem;
+}
+
+.dropdown-item {
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: rgba(11, 13, 26, 0.08);
+    color: var(--bs-primary);
+}
+
+.dropdown-item:active {
+    background-color: rgba(11, 13, 26, 0.15);
+}
+
+/* Service Icons */
+.service-icon {
+    color: var(--bs-primary);
+}
+
+/* Popular Badge */
+.badge-popular {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: linear-gradient(135deg, #CCE8C9 0%, #0b0d1a 100%);
+    color: white;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    z-index: 10;
+}
+
+.price-table.popular {
+    position: relative;
+    border: 2px solid #CCE8C9;
+}
+
+/* Price Styling */
+.price {
+    font-size: 2.5rem;
+    line-height: 1;
+}
+
+.price strong {
+    font-weight: 700;
+}
+
+.currency-symbol {
+    font-size: 2rem;
+    margin-right: 5px;
+}
+
+/* FIXED Mobile Carousel Controls */
+.pricing-carousel {
+    padding: 20px 0;
+    position: relative;
+}
+
+.carousel-item {
+    padding: 20px 0;
+    min-height: 600px;
+}
+
+.carousel-indicators {
+    position: relative;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+.carousel-indicators button {
+    background-color: var(--bs-primary);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+.carousel-indicators button.active {
+    opacity: 1;
+}
+
+/* IMPROVED Carousel Control Buttons */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+}
+
+.carousel-control-prev {
+    left: -20px;
+}
+
+.carousel-control-next {
+    right: -20px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 45px;
+    height: 45px;
+    background-color: var(--bs-primary);
+    border-radius: 50%;
+    background-size: 60%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: #0b0d1a;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+/* Hide carousel controls on very small screens */
+@media (max-width: 575.98px) {
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .carousel-control-prev {
+        left: -10px;
+    }
+    
+    .carousel-control-next {
+        right: -10px;
+    }
+    
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .price {
+        font-size: 2rem;
+    }
+    
+    .currency-symbol {
+        font-size: 1.5rem;
+    }
+}
+
+/* Responsive Grid */
+@media (max-width: 991.98px) {
+    .price-table {
+        margin-bottom: 0;
+    }
+    
+    .carousel-item {
+        min-height: 650px;
+    }
+}
+
+
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(11, 13, 26, 0.1);
+    border-radius: 50%;
+    color: #0b0d1a;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background: #0b0d1a;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+
+
+
+.section-icon {
+  margin-bottom: 1.5rem;
+}
+
+/* Better Benefit Items */
+.benefit-item {
+  padding: 0;
+  margin-bottom: 1rem;
+  min-height: auto;
+}
+
+.benefit-icon {
+  width: 55px;
+  height: 55px;
+  background: rgba(11, 13, 26, 0.08);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.benefit-icon i {
+  font-size: 1.5rem;
+  color: #0b0d1a;
+}
+
+.benefit-content {
+  flex: 1;
+}
+
+.benefit-content h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0b0d1a;
+  margin-bottom: 0.25rem;
+}
+
+.benefit-content small {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: #6c757d;
+}
+
+/* Hover Effects */
+.benefit-item:hover .benefit-icon {
+  background: rgba(11, 13, 26, 0.15);
+  transform: translateY(-2px);
+}
+
+.benefit-item:hover .benefit-icon i {
+  color: #0b0d1a;
+}
+
+/* Mobile Responsive Improvements */
+@media (max-width: 767.98px) {
+  .benefit-item {
+    margin-bottom: 1.5rem;
+  }
+  
+  .benefit-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
+  }
+  
+  .benefit-icon i {
+    font-size: 1.25rem;
+  }
+  
+  .benefit-content h6 {
+    font-size: 0.95rem;
+  }
+  
+  .benefit-content small {
+    font-size: 0.8rem;
+  }
+  
+  /* Stack benefits vertically on very small screens */
+  .row.g-4 {
+    row-gap: 0.5rem !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .benefit-item {
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+  }
+  
+  .benefit-icon {
+    width: 45px;
+    height: 45px;
+    margin-right: 0.875rem;
+  }
+  
+  .benefit-icon i {
+    font-size: 1.1rem;
+  }
+  
+  .benefit-content h6 {
+    font-size: 0.9rem;
+  }
+  
+  .benefit-content small {
+    font-size: 0.75rem;
+  }
+}
+
+/* Subtitle with Icon */
+.subtitle {
+  display: inline-flex;
+  align-items: center;
+}
+
+.subtitle i {
+  font-size: 1.1rem;
+}
+
+/* Button Enhancement */
+.btn-primary.btn-lg {
+  padding: 12px 32px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary.btn-lg:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(11, 13, 26, 0.25);
+}
+
+@media (max-width: 767.98px) {
+  .btn-primary.btn-lg {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
