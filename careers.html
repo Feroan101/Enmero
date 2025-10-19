@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join Enmero Technologies - Build your career with innovation, growth, and impact">
+    <title>Careers - Enmero Technologies</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        .career-hero {
+            background: linear-gradient(135deg, #0b0d1a 0%, #16181B 100%);
+            color: #ffffff;
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        .career-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(204,232,201,0.1)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+            opacity: 0.5;
+        }
+        .career-hero .container {
+            position: relative;
+            z-index: 1;
+        }
+        .hashtag-badge {
+            display: inline-block;
+            background: rgba(204, 232, 201, 0.2);
+            color: #CCE8C9;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin: 5px;
+        }
+        .career-stat {
+            text-align: center;
+            padding: 30px;
+            border-right: 1px solid rgba(255,255,255,0.1);
+        }
+        .career-stat:last-child {
+            border-right: none;
+        }
+        .career-stat h3 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #CCE8C9;
+            margin-bottom: 10px;
+        }
+        .career-stat p {
+            margin: 0;
+            color: rgba(255,255,255,0.8);
+        }
+        .value-card {
+            padding: 40px;
+            border-radius: 20px;
+            background: #ffffff;
+            border: 2px solid #f0f0f0;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        .value-card:hover {
+            border-color: #CCE8C9;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .value-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(204, 232, 201, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 30px;
+            color: #0b0d1a;
+        }
+        .journey-step {
+            position: relative;
+            padding: 40px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+        .journey-number {
+            position: absolute;
+            top: -20px;
+            left: 40px;
+            width: 50px;
+            height: 50px;
+            background: #0b0d1a;
+            color: #CCE8C9;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        .benefit-item {
+            padding: 30px;
+            text-align: center;
+            border-radius: 15px;
+            background: #ffffff;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        .benefit-item:hover {
+            background: #f8f9fa;
+            transform: translateY(-5px);
+        }
+        .benefit-icon {
+            width: 60px;
+            height: 60px;
+            background: #0b0d1a;
+            color: #CCE8C9;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 26px;
+        }
+        .job-category {
+            padding: 40px;
+            border-radius: 15px;
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border: 1px solid #e0e0e0;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            height: 100%;
+        }
+        .job-category:hover {
+            border-color: #CCE8C9;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+        }
+        .job-category h3 {
+            color: #0b0d1a;
+            margin-bottom: 15px;
+        }
+        .job-count {
+            display: inline-block;
+            background: #0b0d1a;
+            color: #CCE8C9;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        .testimonial-card {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            height: 100%;
+        }
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #0b0d1a 0%, #CCE8C9 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-right: 15px;
+        }
+        .cta-banner {
+            background: linear-gradient(135deg, #0b0d1a 0%, #16181B 100%);
+            color: #ffffff;
+            padding: 80px 0;
+            border-radius: 30px;
+            margin: 60px 0;
+        }
+        .search-box {
+            max-width: 800px;
+            margin: 40px auto;
+        }
+        .search-box input {
+            height: 60px;
+            border-radius: 30px;
+            padding: 0 30px;
+            border: 2px solid #e0e0e0;
+            font-size: 1.1rem;
+        }
+        .search-box button {
+            height: 60px;
+            padding: 0 40px;
+            border-radius: 30px;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <header class="fbs__net-navbar navbar navbar-expand-lg dark" aria-label="freebootstrap.net navbar">
+        <div class="container d-flex align-items-center justify-content-between">
+          
+          
+          <!-- Start Logo-->
+          <a class="navbar-brand w-auto" href="index.html">
+            <!-- If you use a text logo, uncomment this if it is commented-->
+            <!-- Vertex--> 
+            
+            <!-- If you plan to use an image logo, uncomment this if it is commented-->
+            
+            <!-- logo dark--><img class="logo dark img-fluid" src="assets/images/logo/enmero-logo.png"  alt="FreeBootstrap.net image placeholder"> 
+            
+            <!-- logo light--><img class="logo light img-fluid" src="assets/images/logo/enmero-logo.png" alt="FreeBootstrap.net image placeholder">
+            
+            </a>
+          <!-- End Logo-->
+          
+          <!-- Start offcanvas-->
+          <div class="offcanvas offcanvas-start w-75" id="fbs__net-navbars" tabindex="-1" aria-labelledby="fbs__net-navbarsLabel">
+            
+            
+            <div class="offcanvas-header">
+              <div class="offcanvas-header-logo">
+                <!-- If you use a text logo, uncomment this if it is commented-->
+                
+                <!-- h5#fbs__net-navbarsLabel.offcanvas-title Vertex-->
+                
+                <!-- If you plan to use an image logo, uncomment this if it is commented-->
+                <a class="logo-link" id="fbs__net-navbarsLabel" href="index.html">
+                  
+                  
+                  <!-- logo dark--><img class="logo dark img-fluid" src="assets/images/logo/enmero-logo.png" alt="FreeBootstrap.net image placeholder"> 
+                  
+                  <!-- logo light--><img class="logo light img-fluid" src="assets/images/logo/enmero-logo.png" alt="FreeBootstrap.net image placeholder"></a>
+                
+              </div>
+              <button class="btn-close btn-close-black" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            
+            <div class="offcanvas-body align-items-lg-center">
+              
+              
+              <ul class="navbar-nav nav me-auto ps-lg-5 mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link scroll-link" aria-current="page" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link scroll-link" href="services.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link scroll-link" href="partnership.html">Partnership</a></li>
+                <li class="nav-item"><a class="nav-link scroll-link" href="vendor.html">Vendor</a></li>
+                <li class="nav-item"><a class="nav-link scroll-link active" href="careers.html">Careers</a></li>
+                <li class="nav-item"><a class="nav-link scroll-link" href="#contact">Contact</a></li>
+              </ul>
+              
+            </div>
+          </div>
+          <!-- End offcanvas-->
+          
+          <div class="ms-auto w-auto">
+            
+            
+            <div class="header-social d-flex align-items-center gap-1"><a class="btn btn-primary py-2" href="#">Get Started</a>
+              
+              <button class="fbs__net-navbar-toggler justify-content-center align-items-center ms-auto" data-bs-toggle="offcanvas" data-bs-target="#fbs__net-navbars" aria-controls="fbs__net-navbars" aria-label="Toggle navigation" aria-expanded="false">
+                <svg class="fbs__net-icon-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="21" x2="3" y1="6" y2="6"></line>
+                  <line x1="15" x2="3" y1="12" y2="12"></line>
+                  <line x1="17" x2="3" y1="18" y2="18"></line>
+                </svg>
+                <svg class="fbs__net-icon-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 6 6 18"></path>
+                  <path d="m6 6 12 12"></path>
+                </svg>
+              </button>
+              
+            </div>
+            
+          </div>
+        </div>
+      </header>
+
+    <!-- Hero Section -->
+    <section class="career-hero">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-10">
+                    <h1 class="display-3 fw-bold mb-4" style="color: #CCE8C9;">Your Next Begins Here</h1>
+                    <p class="lead mb-4" style="font-size: 1.3rem;">Join our community of innovators, problem-solvers, and change-makers. At Enmero Technologies, we're not just building solutions—we're building careers that matter, in an environment where your growth never stands still.</p>
+                    <div class="mt-4">
+                        <span class="hashtag-badge">#InnovationMatters</span>
+                        <span class="hashtag-badge">#GrowthMatters</span>
+                        <span class="hashtag-badge">#ImpactMatters</span>
+                        <span class="hashtag-badge">#YouMatter</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="row mt-5">
+                <div class="col-lg-3 col-md-6">
+                    <div class="career-stat">
+                        <h3>5000+</h3>
+                        <p>Talented Professionals</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="career-stat">
+                        <h3>50+</h3>
+                        <p>Countries Worldwide</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="career-stat">
+                        <h3>1000+</h3>
+                        <p>Client Success Stories</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="career-stat">
+                        <h3>98%</h3>
+                        <p>Employee Satisfaction</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Job Search -->
+    <section class="section">
+        <div class="container">
+            <div class="search-box">
+                <h2 class="text-center mb-4">Explore Opportunities</h2>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search by job title, skills, or location...">
+                    <button class="btn btn-primary" type="button">
+                        <i class="bi bi-search me-2"></i>Search Jobs
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Join Us -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8">
+                    <span class="subtitle">Why Enmero</span>
+                    <h2 class="display-5 fw-bold">Why Choose a Career with Us</h2>
+                    <p class="lead">We're committed to creating an environment where innovation thrives and careers flourish</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="bi bi-lightbulb"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Innovation-Driven Culture</h3>
+                        <p>Work on cutting-edge technologies and innovative projects that shape the future of digital transformation. Your ideas matter here.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="bi bi-graph-up-arrow"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Continuous Learning</h3>
+                        <p>Access to world-class training programs, certifications, and learning platforms. Grow your skills with AI-powered personalized learning paths.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="bi bi-globe"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Global Exposure</h3>
+                        <p>Collaborate with international teams and work on projects across continents. Experience diverse cultures and perspectives.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="bi bi-people"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Inclusive Environment</h3>
+                        <p>Join a diverse team where every voice is heard and valued. We celebrate differences and foster belonging.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="bi bi-award"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Career Growth</h3>
+                        <p>Non-linear career paths, fast-track programs for high performers, and opportunities to lead transformational projects.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="bi bi-heart"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Work-Life Balance</h3>
+                        <p>Flexible working arrangements, wellness programs, and comprehensive benefits that support your well-being.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Job Categories -->
+    <section class="section">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8">
+                    <span class="subtitle">Open Positions</span>
+                    <h2 class="display-5 fw-bold">Explore Opportunities by Category</h2>
+                    <p class="lead">Find the perfect role that matches your skills and aspirations</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="job-category">
+                        <span class="job-count">45 Openings</span>
+                        <h3 class="mt-3">Software Development</h3>
+                        <p class="mb-3">Full-stack developers, backend engineers, frontend specialists, and architects</p>
+                        <a href="#" class="btn btn-outline-primary">View Jobs <i class="bi bi-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="job-category">
+                        <span class="job-count">32 Openings</span>
+                        <h3 class="mt-3">Cybersecurity</h3>
+                        <p class="mb-3">Security analysts, penetration testers, compliance specialists, and architects</p>
+                        <a href="#" class="btn btn-outline-primary">View Jobs <i class="bi bi-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="job-category">
+                        <span class="job-count">28 Openings</span>
+                        <h3 class="mt-3">Data Science & AI</h3>
+                        <p class="mb-3">Data scientists, ML engineers, AI researchers, and analytics specialists</p>
+                        <a href="#" class="btn btn-outline-primary">View Jobs <i class="bi bi-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="job-category">
+                        <span class="job-count">38 Openings</span>
+                        <h3 class="mt-3">Cloud & DevOps</h3>
+                        <p class="mb-3">Cloud architects, DevOps engineers, SRE specialists, and infrastructure experts</p>
+                        <a href="#" class="btn btn-outline-primary">View Jobs <i class="bi bi-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="job-category">
+                        <span class="job-count">25 Openings</span>
+                        <h3 class="mt-3">Consulting</h3>
+                        <p class="mb-3">Business analysts, strategy consultants, digital transformation advisors</p>
+                        <a href="#" class="btn btn-outline-primary">View Jobs <i class="bi bi-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="job-category">
+                        <span class="job-count">18 Openings</span>
+                        <h3 class="mt-3">Design & UX</h3>
+                        <p class="mb-3">UX designers, UI specialists, product designers, and creative directors</p>
+                        <a href="#" class="btn btn-outline-primary">View Jobs <i class="bi bi-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Journey -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8">
+                    <span class="subtitle">Your Journey</span>
+                    <h2 class="display-5 fw-bold">Your Career Path at Enmero</h2>
+                    <p class="lead">From application to impact—here's how we support your growth</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="journey-step">
+                        <div class="journey-number">1</div>
+                        <h3 class="h5 mb-3">Apply & Connect</h3>
+                        <p>Submit your application through our career portal. Our AI-powered system matches your profile with suitable opportunities. Connect with recruiters through virtual meet-ups.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="journey-step">
+                        <div class="journey-number">2</div>
+                        <h3 class="h5 mb-3">Interview Experience</h3>
+                        <p>Engage in meaningful conversations with our hiring managers and technical experts. We assess not just skills, but cultural fit and growth potential.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="journey-step">
+                        <div class="journey-number">3</div>
+                        <h3 class="h5 mb-3">Onboarding Excellence</h3>
+                        <p>Comprehensive onboarding program with mentorship, training, and integration into project teams. Get access to learning platforms from day one.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="journey-step">
+                        <div class="journey-number">4</div>
+                        <h3 class="h5 mb-3">Continuous Growth</h3>
+                        <p>Regular performance reviews, personalized development plans, mentorship opportunities, and access to our internal job marketplace for career mobility.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="section">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8">
+                    <span class="subtitle">Employee Benefits</span>
+                    <h2 class="display-5 fw-bold">Comprehensive Benefits Package</h2>
+                    <p class="lead">We invest in your well-being, growth, and success</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="bi bi-heart-pulse"></i>
+                        </div>
+                        <h4 class="h6 mb-2">Health & Wellness</h4>
+                        <p class="small text-muted mb-0">Comprehensive medical, dental, vision insurance, and wellness programs</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="bi bi-book"></i>
+                        </div>
+                        <h4 class="h6 mb-2">Learning & Development</h4>
+                        <p class="small text-muted mb-0">Unlimited access to training, certifications, and skill development programs</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="bi bi-piggy-bank"></i>
+                        </div>
+                        <h4 class="h6 mb-2">Financial Security</h4>
+                        <p class="small text-muted mb-0">Competitive salary, performance bonuses, retirement plans, and stock options</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="bi bi-laptop"></i>
+                        </div>
+                        <h4 class="h6 mb-2">Flexible Work</h4>
+                        <p class="small text-muted mb-0">Hybrid work model, flexible hours, and remote work opportunities</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="bi bi-calendar-event"></i>
+                        </div>
+                        <h4 class="h6 mb-2">Time Off</h4>
+                        <p class="small text-muted mb-0">Generous paid time off, parental leave, and sabbatical opportunities</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="bi bi-airplane"></i>
+                        </div>
+                        <h4 class="h6 mb-2">Travel Opportunities</h4>
+                        <p class="small text-muted mb-0">International assignments, client visits, and global project opportunities</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="bi bi-people"></i>
+                        </div>
+                        <h4 class="h6 mb-2">Community</h4>
+                        <p class="small text-muted mb-0">Employee resource groups, team events, and volunteer programs</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="bi bi-trophy"></i>
+                        </div>
+                        <h4 class="h6 mb-2">Recognition</h4>
+                        <p class="small text-muted mb-0">Performance awards, spot bonuses, and employee appreciation programs</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8">
+                    <span class="subtitle">Employee Stories</span>
+                    <h2 class="display-5 fw-bold">Hear From Our Team</h2>
+                    <p class="lead">Real experiences from real Enmero professionals</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="mb-3">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                        </div>
+                        <p class="mb-0">"Joining Enmero was the best career decision I've made. The learning opportunities are endless, and I've grown more in two years here than I did in five years elsewhere. The culture truly supports innovation."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">SK</div>
+                            <div>
+                                <strong>Sarah Kumar</strong>
+                                <p class="small text-muted mb-0">Senior Software Engineer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="mb-3">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                        </div>
+                        <p class="mb-0">"The work-life balance at Enmero is exceptional. I can work flexibly while delivering impact on cutting-edge projects. The team is supportive, and management truly cares about employee well-being."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">MC</div>
+                            <div>
+                                <strong>Michael Chen</strong>
+                                <p class="small text-muted mb-0">Cloud Architect</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="mb-3">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                        </div>
+                        <p class="mb-0">"As a fresh graduate, I was nervous about starting my career, but Enmero's mentorship program made all the difference. I've learned from the best and worked on projects I could only dream of."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">AP</div>
+                            <div>
+                                <strong>Priya Agarwal</strong>
+                                <p class="small text-muted mb-0">Data Scientist</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section">
+        <div class="container">
+            <div class="cta-banner">
+                <div class="row justify-content-center text-center">
+                    <div class="col-lg-8">
+                        <h2 class="display-5 fw-bold mb-4" style="color: #494B5B;">Ready to Build Your Future with Us?</h2>
+                        <p class="lead mb-4">Join a team where innovation meets opportunity, and where your career never stands still.</p>
+                        <div>
+                            <a href="#" class="btn btn-light btn-lg me-3 mb-3">Explore All Jobs</a>
+                            <a href="#" class="btn btn-outline-light btn-lg mb-3">Join Talent Community</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Early Careers -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <span class="subtitle">For Students & Graduates</span>
+                    <h2 class="display-5 fw-bold mb-4">Launch Your Career</h2>
+                    <p class="lead mb-4">Start your professional journey with our comprehensive programs designed for early-career professionals.</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i><strong>Graduate Training Program:</strong> 6-month structured learning and hands-on experience</li>
+                        <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i><strong>Internship Programs:</strong> Summer and year-round opportunities across all domains</li>
+                        <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i><strong>Campus Hiring:</strong> Regular recruitment drives at top universities</li>
+                        <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i><strong>Mentorship:</strong> Dedicated mentors to guide your early career journey</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary btn-lg">Explore Graduate Programs</a>
+                </div>
+                <div class="col-lg-6">
+                    <img src="assets/images/careers/graduates.png " alt="Graduate Programs" class="img-fluid rounded-4 shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer section">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <img src="assets/images/logo-dark.png" alt="Enmero Technologies" class="logo mb-3">
+                    <p>Empowering businesses through secure, intelligent, and scalable digital solutions that drive innovation and enable a connected future.</p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h4>Quick Links</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="partnership.html">Partnership</a></li>
+                        <li><a href="vendor.html">Vendor</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4>For Job Seekers</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Search Jobs</a></li>
+                        <li><a href="#">Graduate Programs</a></li>
+                        <li><a href="#">Internships</a></li>
+                        <li><a href="#">Employee Stories</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4>Contact</h4>
+                    <ul class="list-unstyled quick-contact">
+                        <li><i class="bi bi-telephone me-2"></i>+(01 234 567 890)</li>
+                        <li><i class="bi bi-envelope me-2"></i>careers@enmero.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="credits text-center">
+                <p class="mb-0">&copy; 2024 Enmero Technologies. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="back-to-top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.fbs__net-navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('active');
+            } else {
+                navbar.classList.remove('active');
+            }
+        });
+
+        const backToTopButton = document.getElementById('back-to-top');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
