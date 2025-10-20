@@ -144,10 +144,20 @@
               <div class="col-lg-6 mb-4 mb-lg-0">
                 <div class="row">
                   <div class="col-lg-11">
-                    <a href="https://youtu.be/5ZUsPvK7rLs?si=zaS8lE8a6-0yO7fO" target="_blank"><span class="hero-subtitle text-uppercase" data-aos="fade-up" data-aos-delay="0">
-                      Introducing Stradom
-                      <img src="assets/images/mascot-point.png" alt="Stradom logo" style="height: 25px; margin-left: 8px; vertical-align: middle;">
-                    </span></a>
+                    <div id="videoPopup" class="modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); justify-content:center; align-items:center;">
+                      <div style="position:relative; max-width:800px; width:100%;">
+                        <button onclick="closeVideo()" style="position:absolute; top:-40px; right:0; font-size:30px; background:none; border:none; color:#fff; cursor:pointer;">&times;</button>
+                        <iframe id="videoIframe" width="100%" height="450" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                      </div>
+                    </div>
+
+                    <a href="#" onclick="openVideo('https://www.youtube.com/embed/5ZUsPvK7rLs?autoplay=1'); return false;">
+                      <span class="hero-subtitle text-uppercase" data-aos="fade-up" data-aos-delay="0">
+                        Introducing Stradom
+                        <img src="assets/images/mascot-point.png" alt="Stradom logo" style="height: 25px; margin-left: 8px; vertical-align: middle;">
+                      </span>
+                    </a>
+
                     <h1 class="hero-title mb-3" data-aos="fade-up" data-aos-delay="100">Secure, Intelligent, and Future-Ready Digital Solutions</h1>
                     <p class="hero-description mb-4 mb-lg-5" data-aos="fade-up" data-aos-delay="200">Experience the future of engineering with Enmero Technologies—where secure, intelligent, and scalable solutions power digital transformation for modern businesses.</p>
                     <div class="cta d-flex gap-2 mb-4 mb-lg-5" data-aos="fade-up" data-aos-delay="300"><a class="btn" href="started.html">Get Started Now</a><a class="btn btn-white-outline" href="#services">Learn More 
@@ -927,7 +937,7 @@
                 </div>
               </div>
               <div class="col-lg-6" data-aos="fade-left">
-                <img src="assets/images/partnership/partnership-home-hero.png" alt="Business Partnership" class="img-fluid rounded-4 shadow-lg">
+                <img src="assets/images/partnership/partnership.jpeg" alt="Business Partnership" class="img-fluid rounded-4 shadow-lg">
               </div>
             </div>
           </div>
@@ -1003,7 +1013,7 @@
         <!-- End Vendor -->
 
         <!-- ======= Careers Section ======= -->
-        <section class="section careers__cta" style="background: linear-gradient(135deg, rgba(11,13,26,0.95) 0%, rgba(22,24,27,0.95) 100%), url('assets/images/careers/careers-bg.png') center/cover no-repeat;">
+        <section class="section careers__cta" style="background: linear-gradient(135deg, rgba(11,13,26,0.95) 0%, rgba(22,24,27,0.95) 100%), url('assets/images/careers/careers-bg.jpg') center/cover no-repeat;">
           <div class="container">
             <div class="row justify-content-center text-center mb-5">
               <div class="col-lg-8" data-aos="fade-up">
@@ -1284,6 +1294,16 @@
 
 <!-- JavaScript for Currency Conversion -->
 <script>
+  function openVideo(url) {
+    document.getElementById('videoIframe').src = url;
+    document.getElementById('videoPopup').style.display = 'flex';
+  }
+
+  function closeVideo() {
+    document.getElementById('videoIframe').src = '';
+    document.getElementById('videoPopup').style.display = 'none';
+  }
+
   document.addEventListener('DOMContentLoaded', function() {
     console.log('Pricing section loaded');
     
