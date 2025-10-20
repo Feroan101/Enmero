@@ -61,6 +61,27 @@ a:hover {
   text-decoration: none;
 }
 
+.navbar .dropdown-menu {
+  top: 100% !important;   /* makes it appear just below the toggle */
+  margin-top: 0.5rem;     /* optional space between button & menu */
+}
+
+.navbar .nav-item.dropdown {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 991px) {
+  .navbar .dropdown-menu {
+    top: 0 !important;   
+    margin-top: 0;    
+  }
+
+  .navbar .nav-item.dropdown {
+    display: block;
+  }
+}
+
 h1,
 h2,
 h3,
