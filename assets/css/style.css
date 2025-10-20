@@ -835,15 +835,30 @@ h6 {
   padding: 10rem 0 !important;
 }
 .hero__v6 .hero-subtitle {
-  background: color-mix(in srgb, var(--bs-secondary), transparent 70%);
-  color: var(--bs-primary);
+  background: linear-gradient(45deg ,#0b0d1a, #032950);
+  color: white;
   display: inline-block;
   padding: 5px 12px;
   border-radius: 7px;
   font-weight: 600;
-  font-size: 0.75rem;
+  font-size: 0.80rem;
   margin-bottom: 10px;
 }
+
+.quick-contact > .d-flex {
+  gap: 24px; /* spacing between contact and socials */
+}
+
+.quick-contact h3 {
+  white-space: nowrap; /* Keep contact heading in one line */
+}
+
+.social-links {
+  /* Keep icons inline */
+  display: flex;
+  gap: 1rem;
+}
+
 
 .hero__v6 .hero-title {
   font-size: 48px;
@@ -906,7 +921,7 @@ h6 {
 }
 
 .features__v2 .content {
-  background-color: rgba(var(--bs-secondary-rgb), 0.2);
+  background-color: rgba(11, 13, 26, 0.2); 
 }
 
 .features__v2 .btn-play i {
