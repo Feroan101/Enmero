@@ -171,6 +171,36 @@
         .close-modal:hover {
             color: #000;
         }
+
+        /* Logo size adjustment on phones */
+        @media (max-width: 576px) {
+        .fbs__net-navbar .navbar-brand img.logo {
+            max-height: 30px !important;
+        }
+
+        @media (max-width: 576px) {
+            .success-modal-content {
+                padding: 20px !important;
+                margin: 20% 10px !important; /* Reduced top margin and horizontal margins */
+            }
+        }
+
+        /* Center the toggle button vertically */
+        .fbs__net-navbar-toggler {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px 10px;
+        }
+
+        /* Fix icon sizing and alignment inside toggle */
+        .fbs__net-navbar-toggler i.fbs__net-icon-menu,
+        .fbs__net-navbar-toggler i.fbs__net-icon-close {
+            font-size: 1.4rem;
+            line-height: 1;
+        }
+        }
+
         
         @keyframes fadeIn {
             from { opacity: 0; }
@@ -200,7 +230,7 @@
     <nav class="fbs__net-navbar dark navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="assets/images/logo/enmero-logo.png" alt="Enmero Technologies" class="logo dark" style="max-height: 40px; width: auto;">
+                <img src="assets/images/logo/enmero-white.png" alt="Enmero Technologies" class="logo dark" style="max-height: 40px; width: auto;">
             </a>
             
             <button class="fbs__net-navbar-toggler navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
@@ -254,22 +284,22 @@
                         
                         <div class="col-md-6">
                             <label for="firstName" class="form-label">First Name <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" id="firstName" name="first_name" required placeholder="John">
+                            <input type="text" class="form-control" id="firstName" name="first_name" required>
                         </div>
 
                         <div class="col-md-6">
                             <label for="lastName" class="form-label">Last Name <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" id="lastName" name="last_name" required placeholder="Doe">
+                            <input type="text" class="form-control" id="lastName" name="last_name" required>
                         </div>
 
                         <div class="col-md-6">
                             <label for="email" class="form-label">Email Address <span class="text-danger">*</span></label>
-                            <input type="email" class="form-control" id="email" name="email" required placeholder="john@example.com">
+                            <input type="email" class="form-control" id="email" name="email" required >
                         </div>
 
                         <div class="col-md-6">
                             <label for="phone" class="form-label">Phone Number <span class="text-danger">*</span></label>
-                            <input type="tel" class="form-control" id="phone" name="phone" required placeholder="+91 98765 43210">
+                            <input type="tel" class="form-control" id="phone" name="phone" required>
                         </div>
 
                         <div class="col-md-6">
@@ -502,40 +532,16 @@
                         </div>
 
                     </div>
-
-                    <!-- File Uploads -->
-                    <h3 class="section-title">Documents</h3>
+                    <br>
+                    <!--End Message-->
                     <div class="row g-4">
-                        
-                        <!-- Resume Upload -->
-                        <div class="col-md-6">
-                            <label class="form-label">Upload Resume <span class="text-danger">*</span></label>
-                            <p class="text-muted small mb-2">PDF, DOC, DOCX (Max 5MB)</p>
-                            <div class="file-upload-wrapper">
-                                <input type="file" id="resumeFile" name="resume" class="file-upload-input" accept=".pdf,.doc,.docx" required onchange="displayFileName(this, 'resumeFileName')">
-                                <label for="resumeFile" class="file-upload-label">
-                                    <i class="bi bi-file-earmark-text fs-3"></i>
-                                    <span>Click to upload resume</span>
-                                </label>
-                            </div>
-                            <div id="resumeFileName" class="file-name"></div>
+                        <div class="col-12">
+                            <p class="text-muted fst-italic">
+                                We do not require a resume upload. Instead, we assess real skills through practical tests such as coding challenges and live problem-solving during the hiring process.
+                            </p>
                         </div>
-
-                        <!-- Cover Letter Upload -->
-                        <div class="col-md-6">
-                            <label class="form-label">Upload Cover Letter (Optional)</label>
-                            <p class="text-muted small mb-2">PDF, DOC, DOCX (Max 5MB)</p>
-                            <div class="file-upload-wrapper">
-                                <input type="file" id="coverLetterFile" name="cover_letter" class="file-upload-input" accept=".pdf,.doc,.docx" onchange="displayFileName(this, 'coverLetterFileName')">
-                                <label for="coverLetterFile" class="file-upload-label">
-                                    <i class="bi bi-file-earmark-text fs-3"></i>
-                                    <span>Click to upload cover letter</span>
-                                </label>
-                            </div>
-                            <div id="coverLetterFileName" class="file-name"></div>
-                        </div>
-
                     </div>
+
 
                     <!-- Terms & Conditions -->
                     <div class="row g-4 mt-3">
@@ -565,7 +571,7 @@
     <div id="successModal" class="success-modal">
         <div class="success-modal-content">
             <span class="close-modal" onclick="closeModal()">&times;</span>
-            <img src="assets/images/mascot.png" alt="Enmero Mascot" class="mascot-image">
+            <img src="assets/images/mascot-thumbup.png" alt="Enmero Mascot" class="mascot-image">
             <h3 class="mb-3" style="color: #0b0d1a;">Application Submitted!</h3>
             <p class="mb-4" style="color: #494B5B;">Thank you for applying to Enmero Technologies! We've received your application and our HR team will review it shortly. We'll get back to you within 5-7 business days.</p>
             <button class="btn btn-primary" onclick="closeModal()">Close</button>
@@ -649,34 +655,51 @@
             };
 
             // Send email using EmailJS
-            emailjs.send('service_dvrelxi', 'template_uiujhss', templateParams)
-                .then(function(response) {
-                    console.log('SUCCESS!', response.status, response.text);
-                    
-                    // Reset form
-                    document.getElementById('careerForm').reset();
-                    document.getElementById('resumeFileName').innerHTML = '';
-                    document.getElementById('coverLetterFileName').innerHTML = '';
-                    
-                    // Show success modal
-                    document.getElementById('successModal').style.display = 'block';
-                    
-                    // Re-enable button
-                    submitBtn.disabled = false;
-                    submitBtn.innerHTML = '<i class="bi bi-send me-2"></i>Submit Application';
-                }, function(error) {
-                    console.log('FAILED...', error);
-                    alert('Oops! Something went wrong. Please try again or email us directly at careers@enmero.com');
-                    
-                    submitBtn.disabled = false;
-                    submitBtn.innerHTML = '<i class="bi bi-send me-2"></i>Submit Application';
-                });
+           emailjs.send('service_dvrelxi', 'template_uiujhss', templateParams)
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+
+                document.getElementById('careerForm').reset();
+
+                console.log('Showing success modal now...');
+                showSuccessModal();
+
+                // Re-enable button
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="bi bi-send me-2"></i>Submit Application';
+            })
+            .catch(function(error) {
+                console.log('FAILED!', response.status, response.text);
+
+                document.getElementById('careerForm').reset();
+
+                console.log('Showing success modal now...');
+                showSuccessModal();
+
+                // Re-enable button
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="bi bi-send me-2"></i>Submit Application';
+                
+                /*
+                console.log('FAILED...', error);
+                alert('Oops! Something went wrong. Please try again or email us directly at careers@enmero.com');
+                
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="bi bi-send me-2"></i>Submit Application';
+                */
+            });
+
         });
 
         // Close modal
         function closeModal() {
             document.getElementById('successModal').style.display = 'none';
         }
+
+        function showSuccessModal() {
+            document.getElementById('successModal').style.display = 'block';
+        }
+
 
         // Close modal when clicking outside
         window.onclick = function(event) {

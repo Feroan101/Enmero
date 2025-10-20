@@ -82,6 +82,52 @@ a:hover {
   }
 }
 
+@media (max-width: 767.98px) {
+  .row.mt-5.pt-3 {
+    margin-top: 1rem !important;
+    padding-top: 0.5rem !important;
+  }
+  
+  .row.mt-5.pt-3 .col-12.text-center p {
+    margin-bottom: 0.5rem !important;
+  }
+}
+
+
+/*scrolling logos*/
+@keyframes scroll-logos {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.tech-logos-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  /* For tablets and up, make sure container spans full available width */
+  .tech-logos-wrapper {
+    max-width: 100vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/*end of scorlling logos*/
+
 h1,
 h2,
 h3,
@@ -831,10 +877,8 @@ h6 {
 .hero__v6 .hero-img .img-card {
   z-index: 10;
   border-radius: 20px;
-  -webkit-box-shadow: 0 15px 40px 0 rgba(var(--bs-black-rgb), 0.1);
-          box-shadow: 0 15px 40px 0 rgba(var(--bs-black-rgb), 0.1);
   position: absolute;
-  max-width: 280px;
+  max-width: 200px;
   bottom: -40px;
   left: -60px;
 }
@@ -846,8 +890,9 @@ h6 {
 }
 @media (max-width: 575.98px) {
   .hero__v6 .hero-img .img-card {
-    left: 10px;
-    max-width: 280px;
+    bottom:-65px;
+    left: -10px;
+    max-width: 160px;
   }
 }
 
