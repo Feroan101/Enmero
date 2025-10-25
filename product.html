@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Enmero Technologies Products - LEAF & P.E.R.S.I.S.T">
+    <title>Products - Enmero Technologies</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/logo/favicon.png" type="image/png">
+    
+    <style>
+        .product-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+        
+        .product-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #CCE8C9 0%, #A8D5A5 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: #0b0d1a;
+            margin-bottom: 24px;
+        }
+        
+        .product-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #0b0d1a;
+            margin-bottom: 16px;
+        }
+        
+        .product-subtitle {
+            font-size: 1.1rem;
+            color: #6c757d;
+            margin-bottom: 24px;
+            font-style: italic;
+        }
+        
+        .product-description {
+            font-size: 1rem;
+            color: #494B5B;
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+        
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 32px;
+        }
+        
+        .feature-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #e9ecef;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .feature-list i {
+            color: #CCE8C9;
+            font-size: 1.2rem;
+        }
+        
+        .cta-btn {
+            background: #0b0d1a;
+            color: #ffffff;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .cta-btn:hover {
+            background: #16181B;
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(11, 13, 26, 0.3);
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <nav class="fbs__net-navbar dark navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo/enmero-white.png" alt="Enmero Technologies" class="logo dark" style="max-height: 40px; width: auto;">
+            </a>
+            
+            <button class="fbs__net-navbar-toggler navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                <i class="bi bi-list fbs__net-icon-menu"></i>
+                <i class="bi bi-x fbs__net-icon-close"></i>
+            </button>
+            
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+                <div class="offcanvas-header">
+                    <div class="offcanvas-header-logo">
+                        <a href="index.html" class="logo-link">
+                            <img src="assets/images/logo/enmero-logo.png" alt="Enmero Technologies" class="logo">
+                        </a>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
+                        <li class="nav-item"><a class="nav-link scroll-link" href="product.html">Products</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Title -->
+    <section class="page-title" style="background: linear-gradient(135deg, #0b0d1a 0%, #16181B 100%); padding: 80px 0 40px;">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold mb-3 text-white">Our Products</h1>
+                    <p class="lead text-white-50">Innovative solutions designed to transform your business operations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section style="padding: 80px 0; background: #f8f9fa;">
+        <div class="container">
+            <div class="row g-5">
+                
+                <!-- LEAF Product -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="0">
+                    <div class="product-card">
+                        <div class="product-icon">
+                            <i class="bi bi-graph-up-arrow"></i>
+                        </div>
+                        <h2 class="product-title">LEAF</h2>
+                        <p class="product-subtitle">Learn, Extract, Analyze, Forecast</p>
+                        <p class="product-description">
+                            LEAF is an advanced data analysis and pattern recognition software that transforms raw data into actionable insights. Using cutting-edge machine learning algorithms and AI-driven analytics, LEAF helps businesses discover hidden patterns, predict trends, and make data-driven decisions with confidence.
+                        </p>
+                        
+                        <h5 class="fw-bold mb-3">Key Features:</h5>
+                        <ul class="feature-list">
+                            <li>
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Advanced pattern recognition and anomaly detection</span>
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Real-time data processing and visualization</span>
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Predictive analytics and forecasting models</span>
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Customizable dashboards and reporting tools</span>
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Integration with multiple data sources and formats</span>
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>AI-powered insights and recommendations</span>
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Adaptive data processing</span>
+                            </li>
+                        </ul>
+                        
+                        <a href="index.html#contact" class="cta-btn">
+                            <i class="bi bi-envelope me-2"></i>Request Demo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- P.E.R.S.I.S.T Product -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-card">
+                        <div class="product-icon">
+                            <i class="bi bi-shield-lock-fill"></i>
+                        </div>
+                        <h2 class="product-title">P.E.R.S.I.S.T</h2>
+                        <p class="product-subtitle">Proactive, Encrypted, Resilient Security & Intrusion Surveillance Technology</p>
+                        <p class="product-description">
+                            P.E.R.S.I.S.T is a next-generation cybersecurity platform that leverages the latest advancements in threat detection, AI-powered defense mechanisms, and zero-trust architecture. Designed to protect modern enterprises from evolving cyber threats, P.E.R.S.I.S.T provides comprehensive security coverage across networks, endpoints, and cloud infrastructure.
+                        </p>
+                        
+                        <h5 class="fw-bold mb-3">Key Features:</h5>
+                        <ul class="feature-list">
+                            <li>
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>AI-driven threat detection and response</span>
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Zero-trust security architecture</span>
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>End-to-end encryption and data protection</span>
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>24/7 continuous monitoring and alerts</span>
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Advanced intrusion prevention systems (IPS)</span>
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Compliance management and audit trails</span>
+                            </li>
+                        </ul>
+                        
+                        <a href="index.html#contact" class="cta-btn">
+                            <i class="bi bi-envelope me-2"></i>Request Demo
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section style="padding: 80px 0; background: linear-gradient(135deg, #0b0d1a 0%, #16181B 100%);">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h2 class="display-5 fw-bold mb-4 text-white">Ready to Transform Your Business?</h2>
+                    <p class="lead text-white-50 mb-4">
+                        Discover how LEAF and P.E.R.S.I.S.T can elevate your operations, enhance security, and drive growth. Contact us today for a personalized demo.
+                    </p>
+                    <a href="started.html" class="cta-btn" style="background: #CCE8C9; color: #0b0d1a;">
+                        <i class="bi bi-calendar-check me-2"></i>Schedule Consultation
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer section">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <img src="assets/images/logo/enmero-logo.png" alt="Enmero Technologies" class="logo mb-3">
+                    <p>Empowering businesses through secure, intelligent, and scalable digital solutions that drive innovation and enable a connected future.</p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h4>Quick Links</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="partnership.html">Partnership</a></li>
+                        <li><a href="vendor.html">Vendor</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4>Services</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#services">Web Development</a></li>
+                        <li><a href="#services">Cybersecurity</a></li>
+                        <li><a href="#services">Digital Transformation</a></li>
+                        <li><a href="#services">App Development</a></li>
+                    </ul>
+                </div>
+            
+                <div class="row">
+                    <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+                        <h3 class="mb-3">Contact</h3>
+                        <a class="d-flex mb-3" href="mailto:contact@enmero.in">
+                            <i class="bi bi-envelope-fill me-3"></i>
+                            <span>contact@enmero.in</span>
+                        </a>
+                        <a class="d-flex mb-3" href="tel:+919751601062">
+                            <i class="bi bi-telephone-fill me-3"></i>
+                            <span>+91 97516 01062</span>
+                        </a>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+                        <h3 class="mb-3">Follow Us</h3>
+                        <div class="d-flex gap-3">
+                            <a href="https://www.linkedin.com/company/enmero-technologies/" target="_blank" class="social-icon">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                            <a href="https://www.instagram.com/enmeroindia/" target="_blank" class="social-icon">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                            <a href="https://x.com/enmerotech" target="_blank" class="social-icon">
+                                <i class="bi bi-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <hr class="my-4">
+            <div class="credits text-center">
+                <script>document.write(new Date().getFullYear());</script> enmero technologies. 
+                 All rights reserved. 
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation (if you're using it) -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+</body>
+</html>
