@@ -113,6 +113,34 @@
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(11, 13, 26, 0.3);
         }
+
+        @media (max-width: 576px) {
+        .fbs__net-navbar .navbar-brand img.logo {
+            max-height: 30px !important;
+        }
+
+        @media (max-width: 576px) {
+            .success-modal-content {
+                padding: 20px !important;
+                margin: 20% 10px !important; /* Reduced top margin and horizontal margins */
+            }
+        }
+
+        /* Center the toggle button vertically */
+        .fbs__net-navbar-toggler {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px 10px;
+        }
+
+        /* Fix icon sizing and alignment inside toggle */
+        .fbs__net-navbar-toggler i.fbs__net-icon-menu,
+        .fbs__net-navbar-toggler i.fbs__net-icon-close {
+            font-size: 1.4rem;
+            line-height: 1;
+        }
+        }
     </style>
 </head>
 <body>
@@ -151,6 +179,7 @@
             </div>
         </div>
     </nav>
+
 
     <!-- Page Title -->
     <section class="page-title" style="background: linear-gradient(135deg, #0b0d1a 0%, #16181B 100%); padding: 80px 0 40px;">
